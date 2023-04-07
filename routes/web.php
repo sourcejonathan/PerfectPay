@@ -13,6 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/', function(){
+    return view('cartao');
 });
+
+Route::get('/cartao', function () {
+    return view('cartao');
+});
+
+Route::get('/boleto', function(){
+    return view('boleto');
+});
+
+Route::get('/obrigado', function(){
+    return view('obrigado');
+});
+
+Route::get('/obrigado/{id}', function($id){
+    return view('obrigado', [
+        'id'    =>  $id
+    ]);
+});
+
